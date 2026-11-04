@@ -59,9 +59,11 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .press{text-align:left;margin-top:48px}
 :root{--land:rgba(31,37,80,.1);--vis:#3D4A8A}.map{margin-top:72px}#world{width:100%;height:auto;display:block}#world path{fill:var(--land);stroke:var(--alt);stroke-width:.6}#world .vis{fill:var(--vis)}#world .lang{fill:var(--accent)}#world circle{stroke:var(--alt);stroke-width:.8}.legend{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:24px;font-size:15px;color:var(--soft)}.legend span{display:inline-flex;align-items:center;gap:8px}.k{width:12px;height:12px;border-radius:3px;display:inline-block}.k.vis{background:var(--vis)}.k.lang{background:var(--accent)}
 .bio{margin:56px auto 0;max-width:640px;text-align:left;background:var(--alt);border-radius:20px;padding:26px 28px}.bio .bt{font-size:14px;font-weight:600;color:var(--soft);margin-bottom:10px}.bio #biotext{font-size:17px;line-height:1.55}.bio button{margin-top:18px;font:inherit;font-size:15px;background:var(--ink);color:var(--btn-fg);border:0;border-radius:999px;padding:10px 20px;cursor:pointer}.bio button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.posts{text-align:left;margin-top:44px}.posts .row p{max-width:52ch}
+@media (max-width:420px){nav{gap:14px}nav a{font-size:13px}}
 </style>
 </head><body>
-<header><div class="w bar"><a class="mark" href="#top">moustaworldwide</a><nav aria-label="Sections"><a href="#vision">Vision</a><a href="#work">Work</a><a href="#contact">Contact</a></nav></div></header>
+<header><div class="w bar"><a class="mark" href="#top">moustaworldwide</a><nav aria-label="Sections"><a href="#vision">Vision</a><a href="#work">Work</a><a href="#writing">Writing</a><a href="#contact">Contact</a></nav></div></header>
 <main id="top">
 <section class="hero center">
 <div class="w">
@@ -132,14 +134,18 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <p class="lead">Right now, understanding AI is a privilege. <strong>I want to make it common.</strong> More AI literacy, in plain words, for everyone, so more people get a say in what comes next.</p>
 </div>
 </section>
-<section class="center" id="letter">
+<section class="center" id="writing">
 <div class="w narrow">
-<p class="eyebrow">The Sunday letter</p>
+<p class="eyebrow">Writing</p>
 <h2 class="big">perspective is everything</h2>
-<p class="lead">One short essay every Sunday. Free. First letter 8 November.</p>
-<p style="margin-top:32px"><a class="btn" href="#letter">Subscribe</a></p>
+<p class="lead">A short letter every Sunday. One idea, from where I'm standing. Free.</p>
+<div class="list posts" id="posts" hidden></div>
+<p class="lead soon" id="soon">First letter: Sunday 8 November.</p>
+<p style="margin-top:36px"><a class="btn" href="https://substack.com/@moustaworldwide" target="_blank" rel="noopener">Subscribe on Substack</a></p>
 </div>
 </section>
+<script>fetch("writing.json?"+Date.now()).then(function(r){return r.ok?r.json():[]}).then(function(items){if(!items||!items.length)return;var box=document.getElementById("posts");items.slice(0,6).forEach(function(it){var a=document.createElement("a");a.className="row";a.href=it.link;a.target="_blank";a.rel="noopener";var d=document.createElement("div"),h=document.createElement("h3"),p=document.createElement("p"),s=document.createElement("span");h.textContent=it.title;p.textContent=it.summary||"";s.className="s";var dt=new Date(it.date);s.textContent=isNaN(dt)?"":dt.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});d.appendChild(h);if(it.summary)d.appendChild(p);a.appendChild(d);a.appendChild(s);box.appendChild(a)});box.hidden=false;document.getElementById("soon").hidden=true}).catch(function(){});</script>
+
 <section class="contact center" id="contact">
 <div class="w narrow">
 <p class="eyebrow">Contact</p>
