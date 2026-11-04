@@ -58,6 +58,7 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:760px){section{padding-block:84px}.stats{grid-template-columns:1fr;gap:44px}.cols{grid-template-columns:1fr;gap:40px;margin-top:48px}nav{gap:20px}.row{flex-direction:column;gap:6px}}
 .press{text-align:left;margin-top:48px}
 :root{--land:rgba(31,37,80,.1);--vis:#3D4A8A}.map{margin-top:72px}#world{width:100%;height:auto;display:block}#world path{fill:var(--land);stroke:var(--alt);stroke-width:.6}#world .vis{fill:var(--vis)}#world .lang{fill:var(--accent)}#world circle{stroke:var(--alt);stroke-width:.8}.legend{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:24px;font-size:15px;color:var(--soft)}.legend span{display:inline-flex;align-items:center;gap:8px}.k{width:12px;height:12px;border-radius:3px;display:inline-block}.k.vis{background:var(--vis)}.k.lang{background:var(--accent)}
+.bio{margin:56px auto 0;max-width:640px;text-align:left;background:var(--alt);border-radius:20px;padding:26px 28px}.bio .bt{font-size:14px;font-weight:600;color:var(--soft);margin-bottom:10px}.bio #biotext{font-size:17px;line-height:1.55}.bio button{margin-top:18px;font:inherit;font-size:15px;background:var(--ink);color:var(--btn-fg);border:0;border-radius:999px;padding:10px 20px;cursor:pointer}.bio button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 </style>
 </head><body>
 <header><div class="w bar"><a class="mark" href="#top">moustaworldwide</a><nav aria-label="Sections"><a href="#vision">Vision</a><a href="#work">Work</a><a href="#contact">Contact</a></nav></div></header>
@@ -145,6 +146,8 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <h2 class="big">Let's build something.</h2>
 <p class="lead">Founders, collaborations, speaking and press.</p>
 <p class="mail">m@sunkissedhumans.com</p>
+<div class="bio"><p class="bt">Short bio for press and events</p><p id="biotext">Mousta M. Moustafa is a Danish lawyer, founder and former board member of Amnesty International Denmark. In 2017, at 26, he became Denmark's youngest lawyer. Since 2014 he has helped start-ups and scale-ups build and operate across the world, closing deals in more than 50 countries. He speaks eight languages, has visited 105 countries, sits on the board of Chapters Institute and has given two TEDx talks.</p><button type="button" id="copybio">Copy bio</button></div>
+<script>document.getElementById("copybio").addEventListener("click",function(){var b=this,t=document.getElementById("biotext").textContent;function ok(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy bio"},1800)}function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById("biotext"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected, press copy"}if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,sel)}else{sel()}});</script>
 <div class="links"><a href="https://www.instagram.com/moustaworldwide/" target="_blank" rel="noopener">Instagram ›</a></div>
 </div>
 </section>
