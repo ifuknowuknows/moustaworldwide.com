@@ -61,6 +61,7 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .bio{margin:56px auto 0;max-width:640px;text-align:left;background:var(--alt);border-radius:20px;padding:26px 28px}.bio .bt{font-size:14px;font-weight:600;color:var(--soft);margin-bottom:10px}.bio #biotext{font-size:17px;line-height:1.55}.bio button{margin-top:18px;font:inherit;font-size:15px;background:var(--ink);color:var(--btn-fg);border:0;border-radius:999px;padding:10px 20px;cursor:pointer}.bio button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .posts{text-align:left;margin-top:44px}.posts .row p{max-width:52ch}
 @media (max-width:420px){nav{gap:14px}nav a{font-size:13px}}
+.mail a{text-decoration:none;color:var(--ink)}.mail a:hover{color:var(--accent)}
 </style>
 </head><body>
 <header><div class="w bar"><a class="mark" href="#top">moustaworldwide</a><nav aria-label="Sections"><a href="#vision">Vision</a><a href="#work">Work</a><a href="#writing">Writing</a><a href="#contact">Contact</a></nav></div></header>
@@ -141,7 +142,7 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <p class="lead">A short letter every Sunday. One idea, from where I'm standing. Free.</p>
 <div class="list posts" id="posts" hidden></div>
 <p class="lead soon" id="soon">First letter: Sunday 8 November.</p>
-<p style="margin-top:36px"><a class="btn" href="https://substack.com/@moustaworldwide" target="_blank" rel="noopener">Subscribe on Substack</a></p>
+<p style="margin-top:36px"><a class="btn" href="https://moustaworldwide.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a></p>
 </div>
 </section>
 <script>fetch("writing.json?"+Date.now()).then(function(r){return r.ok?r.json():[]}).then(function(items){if(!items||!items.length)return;var box=document.getElementById("posts");items.slice(0,6).forEach(function(it){var a=document.createElement("a");a.className="row";a.href=it.link;a.target="_blank";a.rel="noopener";var d=document.createElement("div"),h=document.createElement("h3"),p=document.createElement("p"),s=document.createElement("span");h.textContent=it.title;p.textContent=it.summary||"";s.className="s";var dt=new Date(it.date);s.textContent=isNaN(dt)?"":dt.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});d.appendChild(h);if(it.summary)d.appendChild(p);a.appendChild(d);a.appendChild(s);box.appendChild(a)});box.hidden=false;document.getElementById("soon").hidden=true}).catch(function(){});</script>
@@ -151,7 +152,7 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <p class="eyebrow">Contact</p>
 <h2 class="big">Let's build something.</h2>
 <p class="lead">Founders, collaborations, speaking and press.</p>
-<p class="mail">m@sunkissedhumans.com</p>
+<p class="mail"><a href="mailto:m@sunkissedhumans.com">m@sunkissedhumans.com</a></p>
 <div class="bio"><p class="bt">Short bio for press and events</p><p id="biotext">Mousta M. Moustafa is a Danish lawyer, founder and former board member of Amnesty International Denmark. In 2017, at 26, he became Denmark's youngest lawyer. Since 2014 he has helped start-ups and scale-ups build and operate across the world, closing deals in more than 50 countries. He speaks eight languages, has visited more than 100 countries, sits on the board of Chapters Institute and has given two TEDx talks.</p><button type="button" id="copybio">Copy bio</button></div>
 <script>document.getElementById("copybio").addEventListener("click",function(){var b=this,t=document.getElementById("biotext").textContent;function ok(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy bio"},1800)}function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById("biotext"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected, press copy"}if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,sel)}else{sel()}});</script>
 <div class="links"><a href="https://www.instagram.com/moustaworldwide/" target="_blank" rel="noopener">Instagram ›</a></div>
