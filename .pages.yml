@@ -1,5 +1,10 @@
 # Pages CMS (app.pagescms.org): edit the English texts and the startup list.
 # Saving runs the "Build site" action: it translates changed lines into the other 7 languages and rebuilds the pages.
+media:
+  input: images
+  output: /images
+  categories: [image]
+  rename: safe
 content:
   - name: site
     label: Website (English decides)
@@ -38,6 +43,10 @@ content:
       - name: k_skip
         label: "Skip link for keyboard users"
         type: string
+      - name: photo
+        label: "Hero · Photo"
+        type: image
+        description: "Portrait works best (4:5, at least 1080 px wide). It is cropped to 4:5 from the centre-top."
       - name: k005
         label: "Hero · Name above the headline"
         type: string
@@ -272,6 +281,9 @@ content:
         description: "Brand line: stays in English on every language page."
       - name: k_priv
         label: "Footer · Privacy link"
+        type: string
+      - name: k_login
+        label: "Footer · Log in link"
         type: string
       - name: k009
         label: "(not shown on the page)"
