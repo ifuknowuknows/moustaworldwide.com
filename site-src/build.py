@@ -42,6 +42,9 @@ def build(code):
     t = dict(en)
     if code != 'en':
         t.update(json.load(open(code + '.json')))
+        for k in json.load(open('dnt.json')):
+            if k in en:
+                t[k] = en[k]  # names and brand lines always follow English
     html = tpl
     html = html.replace('{{VENTURES}}', ventures(code, t))
     for k, v in t.items():
