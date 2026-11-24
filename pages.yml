@@ -1,0 +1,303 @@
+# Pages CMS (app.pagescms.org): edit the English texts and the startup list.
+# Saving runs the "Build site" action: it translates changed lines into the other 7 languages and rebuilds the pages.
+content:
+  - name: site
+    label: Website (English decides)
+    type: file
+    path: site-src/en.json
+    format: json
+    fields:
+      - name: title
+        label: "Browser tab · Title"
+        type: string
+      - name: meta_desc
+        label: "Google and link previews · Description"
+        type: text
+      - name: k000
+        label: "Menu · Wordmark"
+        type: string
+        description: "Brand line: stays in English on every language page."
+      - name: k001
+        label: "Menu · Vision"
+        type: string
+      - name: k002
+        label: "Menu · Work"
+        type: string
+      - name: k003
+        label: "Menu · Writing"
+        type: string
+      - name: k004
+        label: "Menu · Contact"
+        type: string
+      - name: k_cta
+        label: "Main button (Email me)"
+        type: string
+      - name: k_menu
+        label: "Phone menu · Label for screen readers"
+        type: string
+      - name: k_skip
+        label: "Skip link for keyboard users"
+        type: string
+      - name: k005
+        label: "Hero · Name above the headline"
+        type: string
+      - name: k006
+        label: "Hero · Headline"
+        type: string
+      - name: k007
+        label: "Hero · Subtitle"
+        type: string
+      - name: k008
+        label: "Hero · Link to the vision"
+        type: string
+      - name: img_alt
+        label: "Hero · Photo description (for blind visitors and Google)"
+        type: text
+      - name: k014
+        label: "Hero · Number label: languages"
+        type: string
+      - name: k015
+        label: "Hero · Number label: countries visited"
+        type: string
+      - name: k016
+        label: "Hero · Number label: deal countries"
+        type: string
+      - name: k010
+        label: "Vision · Small label"
+        type: string
+      - name: k011
+        label: "Vision · Heading"
+        type: string
+        description: "Brand line: stays in English on every language page."
+      - name: k012
+        label: "Vision · Paragraph 1"
+        type: text
+      - name: k012b
+        label: "Vision · Paragraph 2"
+        type: text
+      - name: k013
+        label: "Vision · Paragraph 3"
+        type: text
+      - name: k013b
+        label: "Vision · Paragraph 4"
+        type: text
+        description: "Text between <strong> and </strong> is shown in bold."
+      - name: k013c
+        label: "Big tagline (lights up word by word)"
+        type: text
+        description: "Text between <strong> and </strong> is shown in bold."
+      - name: k017
+        label: "Languages · Big number"
+        type: string
+      - name: k018
+        label: "Languages · Line under the number"
+        type: string
+      - name: k019
+        label: "Languages · Second line"
+        type: string
+      - name: map_label
+        label: "Map · Description (for blind visitors)"
+        type: string
+      - name: k020
+        label: "Map legend · Visited"
+        type: string
+      - name: k021
+        label: "Map legend · Visited, mother tongue"
+        type: string
+      - name: k022
+        label: "Map legend · Not visited, mother tongue"
+        type: string
+      - name: k022c
+        label: "Map legend · Visited, official language"
+        type: string
+      - name: k022b
+        label: "Map legend · Not visited, official language"
+        type: string
+      - name: k023
+        label: "Map · Footnote and sources"
+        type: text
+      - name: k024
+        label: "Why that matters · Small label"
+        type: string
+      - name: k025
+        label: "Why that matters · Heading"
+        type: string
+      - name: k026
+        label: "Why that matters · Paragraph 1"
+        type: text
+      - name: k027
+        label: "Why that matters · Paragraph 2"
+        type: text
+      - name: k028
+        label: "Why that matters · Paragraph 3"
+        type: text
+        description: "Text between <strong> and </strong> is shown in bold."
+      - name: k029
+        label: "Story · Small label"
+        type: string
+      - name: k030
+        label: "Story · Heading"
+        type: string
+      - name: k031
+        label: "Story · Paragraph"
+        type: text
+      - name: k032
+        label: "Press 1 · Title (TV 2)"
+        type: string
+      - name: k033
+        label: "Press 1 · Outlet"
+        type: string
+      - name: k034
+        label: "Press 1 · Date"
+        type: string
+      - name: k035
+        label: "Press 2 · Title (K-News)"
+        type: string
+      - name: k036
+        label: "Press 2 · Outlet"
+        type: string
+      - name: k037
+        label: "Press 2 · Date"
+        type: string
+      - name: k038
+        label: "Press 3 · Title (Djøfbladet)"
+        type: string
+      - name: k039
+        label: "Press 3 · Outlet"
+        type: string
+      - name: k040
+        label: "Press 3 · Date"
+        type: string
+      - name: k041
+        label: "Work · Small label"
+        type: string
+      - name: k042
+        label: "Work · Heading"
+        type: string
+      - name: k043
+        label: "Work 01 · Title"
+        type: string
+      - name: k044
+        label: "Work 01 · Text"
+        type: text
+      - name: k045
+        label: "Work 02 · Title"
+        type: string
+      - name: k046
+        label: "Work 02 · Text"
+        type: text
+      - name: k047
+        label: "Work 03 · Title"
+        type: string
+      - name: k048
+        label: "Work 03 · Text"
+        type: text
+      - name: k061
+        label: "AI · Small label"
+        type: string
+      - name: k062
+        label: "AI · Heading"
+        type: string
+      - name: k063
+        label: "AI · Paragraph 1"
+        type: text
+      - name: k064
+        label: "AI · Paragraph 2"
+        type: text
+        description: "Text between <strong> and </strong> is shown in bold."
+      - name: k065
+        label: "Writing · Small label"
+        type: string
+      - name: k066
+        label: "Writing · Heading (letter name)"
+        type: string
+        description: "Brand line: stays in English on every language page."
+      - name: k067
+        label: "Writing · Text"
+        type: text
+      - name: k069
+        label: "Writing · Subscribe link"
+        type: string
+      - name: k068
+        label: "Writing · Shown when no posts load"
+        type: string
+      - name: k070
+        label: "Contact · Small label"
+        type: string
+      - name: k071
+        label: "Contact · Heading"
+        type: string
+      - name: k072
+        label: "Contact · Text"
+        type: string
+      - name: k073
+        label: "Contact · Email address (also used by every Email me button)"
+        type: string
+        pattern:
+          regex: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+          message: "Enter an email address, like name@domain.com"
+      - name: k074
+        label: "Bio · Small label"
+        type: string
+      - name: k075
+        label: "Bio · Press bio (third person)"
+        type: text
+      - name: k076
+        label: "Bio · Copy button"
+        type: string
+      - name: k077
+        label: "Social link · Instagram"
+        type: string
+      - name: k078
+        label: "Social link · TikTok"
+        type: string
+      - name: k079
+        label: "Social link · Threads"
+        type: string
+      - name: k080
+        label: "Social link · X"
+        type: string
+      - name: k081
+        label: "Social link · Snapchat"
+        type: string
+      - name: k082
+        label: "Social link · Substack"
+        type: string
+      - name: k083
+        label: "Footer · Copyright"
+        type: string
+      - name: k084
+        label: "Footer · Line"
+        type: string
+        description: "Brand line: stays in English on every language page."
+      - name: k_priv
+        label: "Footer · Privacy link"
+        type: string
+      - name: k009
+        label: "(not shown on the page)"
+        type: string
+        hidden: true
+      - name: ventures
+        label: "Startups and projects (Work section, in this order)"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Name
+            type: string
+            required: true
+            description: "Shown as written in every language (brand names stay lowercase)."
+          - name: text
+            label: One line about it
+            type: text
+          - name: status
+            label: Your role or status
+            type: string
+            description: "e.g. Board member, Founder, In development"
+          - name: link
+            label: Link (optional)
+            type: string
+            description: "Full address starting with https://. Leave empty for no link."
